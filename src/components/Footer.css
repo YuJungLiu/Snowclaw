@@ -1,0 +1,48 @@
+.footer {
+    display: flex;  
+    justify-content: space-between; 
+    align-items: center;  
+    
+    padding: 8rem 4rem 4rem 4rem;  
+    background-color: #fcfcfc;
+    color: #6A6A6A;
+    font-family: 'Manrope', sans-serif;
+    font-size: calc(0.6rem + 0.3vw);
+    box-sizing: border-box;
+}
+
+.contact {
+    display: flex;
+    justify-content: flex-start;
+    gap: 2rem; 
+}
+
+.contact a {
+    color: #6A6A6A;
+    transition: color 0.2s;
+}
+
+.contact a:hover {
+    color: #313131;
+    text-decoration: underline;   
+    text-underline-offset: 5px;
+}
+
+.contact span {
+    display: none; 
+}
+
+.copyright p {
+    margin: 0;           
+}
+
+@media (max-width: 768px) {
+    .footer {
+        flex-direction: column; 
+        gap: 1.5rem;   
+        text-align: center;
+        padding: 4rem 0rem 3rem 0rem; /* 減少左右 Padding */
+        box-sizing: border-box;
+        font-size: calc(0.6rem + 0.2vw);
+    }
+}

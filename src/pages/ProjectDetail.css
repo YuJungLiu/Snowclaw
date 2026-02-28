@@ -1,0 +1,332 @@
+﻿/* --- 基礎容器與漸層背景 --- */
+.project-detail-container {
+  width: 100%;
+  position: relative;
+  background-color: #FCFCFC;
+  overflow-x: hidden;
+}
+
+.gradient-background-overlay {
+  position: absolute;
+  top: 40rem;
+  left: 0;
+  width: 100%;
+  height: 110vh; /* 漸層延伸長度 */
+  background: linear-gradient(180deg, #FCFCFC 0%, #EFECE6 50%, #FCFCFC 100%);
+  z-index: 0;
+  pointer-events: none;
+}
+
+.project-detail-content-wrapper {
+  position: relative;
+  z-index: 1;
+}
+
+/* --- Hero 封面圖 (調整為不疊文字的純圖模式) --- */
+.detail-hero {
+  width: 100%;
+  height: 50vh; 
+  min-height: 400px;
+  overflow: hidden;
+  background-color: #eee;
+}
+
+.hero-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* --- 標題資訊區 (移至圖片下方) --- */
+.detail-header-section {
+  width: 70%;
+  margin: 0 auto;
+  padding: 4rem 0 2rem 0;
+  text-align: left;
+}
+
+.hero-title {
+  color: #414141;
+  font-family: 'Manrope', sans-serif;
+  font-size: calc(1.6rem + 0.3vw);
+  font-weight: 800;
+  margin-top: 2rem;
+  line-height: 1.1;
+  letter-spacing: -1px;
+}
+
+.hero-subtitle {
+  color: #6a6a6a;
+  font-family: 'Manrope', sans-serif;
+  font-size: calc(0.8rem + 0.2vw);
+  font-style: italic;
+  margin: 1rem 0 0.5rem 0;
+}
+
+.hero-year {
+  color: #999;
+  font-family: 'Manrope', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  padding-top: 2rem;
+}
+
+.title-link {
+  text-decoration: none; /* 移除底線 */
+  color: #4d483f;        /* 繼承父層顏色 */
+  opacity: 0.7;
+  transition: opacity 0.3s ease;
+  cursor: pointer;
+}
+
+/* Hover 效果：讓使用者知道這是可以點的 */
+.title-link:hover {
+  opacity: 1;
+  color: #6a6a6a; 
+  text-decoration: underline; /* 或是你要加回底線也可以，看你設計 */
+}
+
+/* --- 製作資訊區 (Contribution & Credits) --- */
+.detail-meta-section {
+  width: 70%;
+  margin: 0 auto;
+  padding: 3rem 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.meta-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6rem;
+}
+
+.meta-label {
+  display: block;
+  font-family: 'Manrope', sans-serif;
+  font-size: calc(0.7rem + 0.2vw); 
+  font-weight: 700;
+  color: #aaa;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  margin-bottom: 1.2rem;
+}
+
+.meta-value {
+  font-family: 'Manrope', sans-serif;
+  font-size: 1rem;
+  color: #313131;
+  line-height: 1.6;
+}
+
+/* --- 主內容區 (影片、描述、截圖) --- */
+.detail-main-content {
+  width: 70%;
+  margin: 0 auto;
+  padding: 5rem 0 10rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6rem;
+}
+
+/* YouTube 容器置中與比例 */
+.detail-video-box {
+  width: 100%;
+  /* max-width: 1000px; */
+  margin: 0 auto;
+  aspect-ratio: 16 / 9;
+  background-color: #000;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.1);
+}
+
+.detail-video-box iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* 描述文字閱讀優化 */
+
+.detail-description {
+  width: 90%;
+  max-width: 90%; /* 讓它填滿 70% 空間，不留白 */
+  text-align: left;
+  font-family: 'Manrope', sans-serif;
+  font-size: 1.1rem;
+  line-height: 1.8; /* 小間距：行與行之間的距離 */
+  color: #6a6a6a;
+}
+
+.detail-description p {
+  margin-bottom: 2.5rem; /* 大間距：段落與段落之間的距離 */
+}
+
+/* 截圖列表 */
+.detail-gallery {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4rem;
+}
+
+.gallery-img {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.02);
+}
+
+/* --- 📱 手機端響應式校準 --- */
+@media (max-width: 768px) {
+
+  .gradient-background-overlay {
+  top: 25rem;
+  height: 60vh; 
+  }
+  .detail-hero {
+    width: 100%;
+    height: 25vh; /* 寬扁比例 */
+    min-height: auto; 
+  }
+
+  /* 1. 標題區域：維持置中 */
+  .detail-header-section {
+    width: 100%;
+    margin: 0 auto;
+    padding: 2rem 0 2rem 0;
+    text-align: center; /* 標題、副標、年份置中 */
+  }
+
+  .hero-title {
+    font-size: 1.3rem;
+    margin-top: 0.5rem;
+    color: #6a6a6a;
+  }
+
+  .hero-subtitle {
+    font-size: 0.75rem;
+    margin: 0.5rem auto 0 auto;
+  }
+
+  .hero-year {
+    font-size: 0.8rem;
+    padding-top: 1rem;
+  }
+
+  /* 2. 製作資訊區 (Meta)：恢復置左 */
+  .detail-meta-section {
+    width: 85%;
+    margin: 0 auto;
+    padding: 4rem 0;
+    text-align: left; /* 關鍵：讓 Individual Contribution 那些資訊靠左 */
+  }
+
+  .meta-grid {
+    grid-template-columns: 1fr; /* 單欄排版 */
+    gap: 1.5rem; /* 增加一點間距 */
+  }
+
+  .meta-label {
+    display: block;
+    font-family: 'Manrope', sans-serif;
+    font-size: 0.75rem; 
+    font-weight: 700;
+    color: #bbbbbb;
+    margin-bottom: 0.5rem; /* 標籤與內容的距離 */
+  }
+
+  .meta-value {
+    font-family: 'Manrope', sans-serif;
+    font-size: 0.75rem;
+    color: #919191;
+    line-height: 1.5;
+  }
+
+  /* 3. 主內容與圖片區 */
+  .detail-main-content {
+    width: 90%;
+    margin: 0 auto;
+    gap: 2rem;
+    padding-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* 讓內容容器置中 */
+  }
+
+  .detail-description {
+    display: none; /* 隱藏描述文字 */
+    font-size: 0.7rem;
+  }
+
+  .detail-gallery {
+    width: 100%;
+    gap: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .gallery-img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+/* Back to top */
+
+.back-to-top-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 4rem 0 2rem 0; /* 與上方 Gallery 和下方 Footer 的間距 */
+  margin-top: 2rem;
+}
+
+.back-to-top-btn {
+  background: transparent;
+  border: 1px solid #d1d1d1; /* 淡淡的邊框 */
+  padding: 0.8rem 2.2rem;
+  font-family: 'Manrope', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #6a6a6a;
+  cursor: pointer;
+  border-radius: 50px; /* 圓角膠囊造型 */
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.back-to-top-btn .arrow-up {
+  transition: transform 0.4s ease;
+}
+
+/* Hover 效果：變深色，箭頭往上跳一下 */
+.back-to-top-btn:hover {
+  background-color: #222;
+  color: #fff;
+  border-color: #222;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+}
+
+.back-to-top-btn:hover .arrow-up {
+  transform: translateY(-3px);
+}
+
+/* 手機端微調 */
+@media (max-width: 768px) {
+  .back-to-top-container {
+    padding: 0rem 0 0.1rem 0;
+  }
+  .back-to-top-btn {
+    padding: 0.7rem 1.8rem;
+    font-size: 0.7rem;
+  }
+}

@@ -1,0 +1,60 @@
+:root {
+  --nav-font-size: calc(0.7rem + 0.1vw);
+  --nav-color: #6A6A6A;
+  --nav-active-color: #313131;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.sticky-nav {
+  position: fixed;
+  right: 3vw;
+  top: 30%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: row; 
+  align-items: stretch; /* 重要：讓子元素（線條）高度能拉伸到跟容器一樣高 */
+  gap: 20px;
+  z-index: 9999;
+}
+
+.nav-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end; /* 文字向右對齊，靠近線條 */
+  gap: 1.2rem;          /* 項目之間的垂直距離 */
+}
+
+.nav-list a {
+  text-decoration: none;
+  font-family: 'Manrope', sans-serif;
+  color: #919191;
+  font-size: calc(0.7rem + 0.1vw);
+  transition: all 0.3s ease;
+  white-space: nowrap;  
+}
+
+.nav-list a:hover {
+  color: #313131;
+  font-weight: 500;
+  transform: translateX(-40px); 
+}
+
+.nav-line {
+  width: 1px;
+  height: auto;       /* 取消固定高度 */
+  align-self: stretch; /* 關鍵：這會讓線條拉伸填滿父容器的垂直空間 */
+  background-color: #b6b6b6;
+  flex-shrink: 0;
+}
+
+@media (max-width: 768px) {
+  .sticky-nav {
+    display: none; /* 手機端保持乾淨 */
+  }
+}

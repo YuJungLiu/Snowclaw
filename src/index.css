@@ -1,0 +1,33 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body, #root, .App {
+    width: 100%;
+    /* min-width: 100vw; */
+    margin: 0;
+    padding: 0;
+    background-color: #FCFCFC;
+    overflow-x: hidden;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+header {
+    position: sticky; 
+    top: 0;
+    z-index: 1000; 
+}
+
+footer {
+    position: relative;
+    z-index: 10;
+}

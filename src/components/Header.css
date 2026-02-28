@@ -1,0 +1,64 @@
+.header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    padding: 4rem 4rem; 
+    background-color: #fcfcfc;
+    width: 100%;
+    box-sizing: border-box; 
+}
+
+/* Menu */
+.menu-nav {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+    white-space: nowrap;
+    margin: 0; 
+    padding: 0; 
+}
+
+/* Logo */
+.home a {
+    text-decoration: none;
+    color: #444444;
+    font-family: 'Manrope', sans-serif;
+    font-size: calc(1rem + 0.4vw); 
+    font-weight: bold;               
+    white-space: nowrap;
+}
+
+/* Menu Font */
+.menu-nav li a {
+    text-decoration: none;
+    color: #6A6A6A;      
+    font-family: 'Manrope', sans-serif;
+    font-size: calc(0.7rem + 0.3vw); 
+    font-weight: 400; 
+    display: inline-block; 
+    transition: transform 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55), color 0.2s;
+}
+
+.menu-nav li a:hover {
+    color: #000000;
+    transform: scale(1.05) rotate(-1deg);
+}
+
+/* --- RWD Mobile --- */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        padding: 4rem 2rem;   
+        gap: 1.5rem;         
+    }
+
+    .menu-nav {
+        justify-content: center; 
+        flex-wrap: wrap;     
+        gap: 1.2rem;   
+        width: 100%; 
+    }
+}
