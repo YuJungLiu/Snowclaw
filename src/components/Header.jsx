@@ -7,6 +7,7 @@ const Header = () => {
     <header>
       <div className="header">
         <div className="home">
+          {/* <img src="/assets/Logo_1.png" alt="Snowclaw Games Logo" className="logo" /> */}
           <Link to="/">Snowclaw Games</Link>
         </div>
 

@@ -141,7 +141,7 @@
   background-color: #000;
   border-radius: 8px;
   overflow: hidden;
-  box-shadow: 0 20px 50px rgba(0,0,0,0.1);
+  /* box-shadow: 0 20px 50px rgba(0,0,0,0.1); */
 }
 
 .detail-video-box iframe {
@@ -203,7 +203,7 @@
   }
 
   .hero-title {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     margin-top: 0.5rem;
     color: #6a6a6a;
   }
@@ -222,7 +222,7 @@
   .detail-meta-section {
     width: 85%;
     margin: 0 auto;
-    padding: 4rem 0;
+    padding: 2rem 0;
     text-align: left; /* 關鍵：讓 Individual Contribution 那些資訊靠左 */
   }
 
@@ -262,8 +262,9 @@
   }
 
   .detail-description {
-    display: none; /* 隱藏描述文字 */
-    font-size: 0.7rem;
+    /*display: none; /* 隱藏描述文字 */
+    font-size: calc(0.9rem);
+    margin-top: 1.5rem;
   }
 
   .detail-gallery {
