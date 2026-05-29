@@ -73,7 +73,7 @@ const About = () => {
               <a href="mailto:miniQQ.ex@gmail.com" className="social-icon">
                 <img src="assets/email.png" alt="Email" />
               </a>
-              <a href="https://linkedin.com/..." className="social-icon">
+              <a href="https://www.linkedin.com/in/yu-jung-liu/" className="social-icon">
                 <img src="assets/linkedin.png" alt="LinkedIn" />
               </a>
             </div>
