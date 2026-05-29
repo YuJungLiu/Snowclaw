@@ -24,7 +24,7 @@ function App() {
         <Header />      
         <Routes>
           <Route path="/" element={<Home />} />
-          {/* <Route path="/about" element={<About />} /> */}
+          {<Route path="/about" element={<About />} /> }
           
           {/* <Route path="/ux" element={<CategoryPage categoryType="ux" />} /> */}
           <Route path="/game" element={<CategoryPage categoryType="game" />} />

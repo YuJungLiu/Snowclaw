@@ -12,7 +12,7 @@
             id: 'wando', 
             tag: 'Mobile Puzzle Game', 
             title: 'Wando', 
-            img: '/assets/Wan_2.png', 
+            img: '/assets/Wan_3.png', 
             fullWidth: true,
             details: {
               coverImg: '/assets/Wan_3.png', 
@@ -22,16 +22,44 @@
               contribution: 'Game Direct (Game & Level, UIUX, Sound, Motion Design)',
               credits: '劉有容(Liu Yu-Jung), 白雅云(Pai Ya-Yun), 何政勳(Ho Cheng-Hsun)',
               videoUrl: 'https://www.youtube.com/embed/GD-1PSTsYtg?si=mGDYdKCr_URmwZvR', 
-              description: `“Wando” is a therapeutic and artistic puzzle game. The game is themed around nature and ancient civilizations, and players can embark on adventure with protagonist "Kgoro" to experience various puzzles. 
+              description: `'Wando' was spotlighted on the App Store banner and regional featured as a 'Today' recommendation (Taiwan, Hongkong), with 4.8 star rating, generating over 7,000EUR in profit on mobile platforms.
               
-              Using spells to transform plants and creating a path connecting the beginning and the endpoint. Through these actions, players can help Kgoro overcome challenges and continue his journey into the unknown.
+              'Wando' is a therapeautic game where players use spells to transform plants and create a path connecting the beginning and the endpoint. Through these actions, players can help Kgoro overcome challenges and continue his journey into the unknown.
               
               Honors |
               2024 AppStore Regional Featured     'Today' recommendation & Banner
               2023 Bahamut ACG Award     Merit
               2023 Vision Get Wild Award     Silver`, 
               screenshots: [
-                // '/assets/portfolio/Wan_P_1.jpg',
+                '/assets/PR/Wan_PR2.png',
+                '/assets/PR/Wan_PR1.png',
+                '/assets/PR/Wan_PR4.png',
+                '/assets/PR/Wan_PR5.png',
+                '/assets/PR/Wan_PR3.png',
+                // '/assets/PR/Wan_P_6.png',
+              ]
+            }
+          },
+          { 
+            id: 'psyqualogy', 
+            tag: 'Desktop Pet', 
+            title: 'Psyqualogy', 
+            img: '/assets/Psy_2.png', 
+            fullWidth: true, 
+            isComingSoon: false,
+            details: {
+              coverImg: '/assets/Psy_2.png', 
+              subtitle: 'Desktop Pet',
+              externalLink: 'https://space.bilibili.com/3546635841833222/upload/video',
+              year: 'Plan release 2027 Q1',
+              contribution: 'Game Direct (Game & Level, UIUX, Sound, Motion Design)',
+              credits: '劉有容(Liu Yu-Jung), 白雅云(Pai Ya-Yun), 心理鴨 Psyqualogy [金洲 (Jin Zhou)], 毛一迪(Mao Yidi), 張繹涵(Zhang Yi-Han)',
+              videoUrl: 'https://player.bilibili.com/player.html?isOutside=true&aid=113857854964045&bvid=BV1yjw2evEi1&cid=27967424408&p=1', 
+              description: `"Psyqualogy" is a virtual desktop pet game developed in collaboration with a well-known IP that boasts over 1 million followers across the web, focusing on a relaxing, casual, and idle-farming experience.
+               
+              The game is slated for release in Q1 2027, now currently under active development.`, 
+              screenshots: [
+                // '/assets/PR/Psy_PR1.png',
                 // '/assets/portfolio/Wan_P_2.jpg',
                 // '/assets/portfolio/Wan_P_3.jpg',
                 // '/assets/portfolio/Wan_P_4.jpg',
@@ -40,18 +68,18 @@
               ]
             }
           },
-          // { id: 'tiny-criminals', tag: 'Adventure Parkour Game', title: 'Tiny Criminals', img: '/assets/Tiny_2.png', fullWidth: false,             
+          // { id: 'tiny-criminals', tag: 'Adventure Parkour Game', title: 'Tiny Criminals', img: '/assets/Tiny_3.png', fullWidth: true,             
           //   details: {
           //     coverImg: '/assets/Tiny_3.png', 
-          //     subtitle: 'Adventure Parkour Game (Aalto School Project)',
+          //     subtitle: 'Adventure Parkour Game',
           //     externalLink: 'https://eelis-koivusaari.itch.io/tiny-criminals',
           //     year: '2025',
           //     contribution: 'Game & Level, UIUX, Sound, Motion Design',
           //     credits: '劉有容(Liu Yu-Jung), Eelis Koivusaari, Apurv Rayate, 胡宇宸(Hu Yuchen), Michelle Lauriste',
           //     videoUrl: 'https://www.youtube.com/embed/J8EVziidqNc?si=paqIBtP88I5PV5tm', 
-          //     description: `Tiny Criminals is a multi-round survival game where you pull off heists to grab cash and upgrade your humble grandma's house into the ultimate criminal hideout. Plan smart, steal big, and turn each successful job into better gear, bigger rewards, and bolder crimes. Cute on the outside, chaotic at heart. 
+          //     description: `'Tiny Criminals' is a multi-round survival game where you pull off heists to grab cash and upgrade your humble grandma's house into the ultimate criminal hideout. Plan smart, steal big, and turn each successful job into better gear, bigger rewards, and bolder crimes. Cute on the outside, chaotic at heart. 
               
-          //     IT'S ROBBING TIME!`, 
+          //     `, 
           //     screenshots: [
           //       '/assets/portfolio/Tiny_P_1.jpg',
           //       '/assets/portfolio/Tiny_P_2.jpg',
@@ -62,7 +90,6 @@
           //     ]
           //   }
           // },
-          { id: 'psyqualogy', tag: 'Desktop Pet', title: 'Psyqualogy', img: '/assets/Psy_2.png', fullWidth: true, isComingSoon: true },
         ]
       },
       // {

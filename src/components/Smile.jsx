@@ -8,6 +8,7 @@ const Smile = () => {
     const [faceSrc, setFaceSrc] = useState('assets/smile.png'); // 使用你原本的路徑
     const [activeLayerIdx, setActiveLayerIdx] = useState(0);
     const [currentLevel, setCurrentLevel] = useState(0);
+    const isGameOverRef = useRef(false);
 
     // 模擬 HTML 中的四個背景節點
     const [bgLayers, setBgLayers] = useState([
@@ -24,7 +25,7 @@ const Smile = () => {
         const nextIdx = activeLayerIdx;
         const prevIdx = (activeLayerIdx === 0) ? 1 : 0;
         
-        const transTime = (lvl === 'cry') ? 'opacity 0.3s ease-in' : 'opacity 1.5s ease-in-out';
+        const transTime = (lvl === 'cry') ? 'opacity 0.3s ease-in' : 'opacity 0.2s ease-in-out';
 
         setBgLayers(prev => {
             const newState = [...prev];
@@ -56,9 +57,14 @@ const Smile = () => {
 
         // --- 等級與 Overlay 邏輯 (對照 style.js 第 47-61 行) ---
         if (newCount === 13) {
-            setIsGameOver(true);
+            if (resetTimerRef.current) {
+                clearTimeout(resetTimerRef.current);
+                resetTimerRef.current = null;
+            }
             setFaceSrc('assets/cry.png');
             transitionToLevel('cry');
+            setIsGameOver(true);
+            isGameOverRef.current = true;
             return; // 結束後不處理後續位移
         } else if (newCount === 8) {
             transitionToLevel('2');
@@ -77,9 +83,19 @@ const Smile = () => {
 
         if (resetTimerRef.current) clearTimeout(resetTimerRef.current);
         resetTimerRef.current = setTimeout(() => {
-            if (!isGameOver) setFaceSrc('assets/smile.png');
+            if (!isGameOverRef.current) setFaceSrc('assets/smile.png');
         }, 250);
     };
+
+    useEffect(() => {
+        isGameOverRef.current = isGameOver;
+        return () => {
+            if (resetTimerRef.current) {
+                clearTimeout(resetTimerRef.current);
+                resetTimerRef.current = null;
+            }
+        };
+    }, [isGameOver]);
 
     // --- Bubble Pop Transform (對照 style.js 第 11-19 行) ---
     const getPopStyle = () => {

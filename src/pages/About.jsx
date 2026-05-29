@@ -46,6 +46,14 @@ const About = () => {
     }
   ];
 
+  const partners = [
+    { name: "Psyqualogy", title: "IP Partner", image: "assets/photo_psy.png" },
+    { name: "Mao Yidi", title: "Software Engineer", image: "assets/photo_yidi.png" },
+    { name: "Zhang Yi-Han", title: "2D&3D Artist", image: "assets/photo_amy.jpg" },
+    { name: "Ho Cheng-Hsun", title: "Software Engineer", image: "assets/photo_zheng.png" },
+    { name: "Liu Zihan", title: "Game Design Consultant", image: "assets/photo_zihan.jpg" },
+  ];
+
   return (
     <div className="about-wrapper">
       <section className="profile-hero">
@@ -55,11 +63,11 @@ const About = () => {
         <div className="profile-info">
           <div className="name-group">
             <h1 className="name-en">Liu Yu-Jung</h1>
-            <h2 className="name-zh">劉有容</h2>
+            <h3 className="name-zh">Co-Founder, Game Director</h3>
           </div>
           <div className="contact-container">
             <p className="profile-description">
-              I craft happiness (◍•ᴗ•◍)ゝ
+            (◍•ᴗ•◍)ゝ
             </p>
             <div className="social-links">
               <a href="mailto:miniQQ.ex@gmail.com" className="social-icon">
@@ -72,11 +80,50 @@ const About = () => {
           </div>
         </div>
       </section>
+      <div className="section-divider"></div>
+      <section className="profile-hero">
+        <div className="profile-img-container">
+          <img src="assets/photo_2.png" alt="Pai Ya-Yun" />
+        </div>
+        <div className="profile-info">
+          <div className="name-group">
+            <h2 className="name-en">Pai Ya-Yun</h2>
+            <h2 className="name-zh">Co-Founder, Art Director</h2>
+          </div>
+          <div className="contact-container">
+            <p className="profile-description">
+          (๑ • ‿ • ๑)
+            </p>
+            <div className="social-links">
+              <a href="mailto:pai87wendy@gmail.com" className="social-icon">
+                <img src="assets/email.png" alt="Email" />
+              </a>
+              <a href="https://www.linkedin.com/in/wendy-pai-893ab9283/" className="social-icon">
+                <img src="assets/linkedin.png" alt="LinkedIn" />
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div className="section-divider"></div>
 
-      <div className="resume-container">
+      <section className="partner-section">
+        <h2 className="row-title">合作夥伴</h2>
+        <div className="partner-row">
+          {partners.map((partner, index) => (
+            <div className="partner-card" key={index}>
+              <img src={partner.image} alt={partner.name} />
+              <p className="partner-name">{partner.name}</p>
+              <p className="partner-title">{partner.title}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* <div className="resume-container">
         <ResumeSection title="Experience" data={experienceData} />
         <ResumeSection title="Education" data={educationData} />
-      </div>
+      </div> */}
     </div>
   );
 };

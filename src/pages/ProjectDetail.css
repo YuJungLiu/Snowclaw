@@ -74,8 +74,8 @@
 }
 
 .title-link {
-  text-decoration: none; /* 移除底線 */
-  color: #4d483f;        /* 繼承父層顏色 */
+  /*text-decoration: none; /* 移除底線 */
+  color: #413a25;        /* 繼承父層顏色 */
   opacity: 0.7;
   transition: opacity 0.3s ease;
   cursor: pointer;
@@ -94,6 +94,8 @@
   margin: 0 auto;
   padding: 3rem 0;
   border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  white-space: nowrap;
+  overflow-x: auto;
 }
 
 .meta-grid {
@@ -243,6 +245,9 @@
     font-size: 0.75rem;
     color: #919191;
     line-height: 1.5;
+    white-space: normal;
+    overflow-wrap: anywhere;
+    word-break: break-word;
   }
 
   /* 3. 主內容與圖片區 */

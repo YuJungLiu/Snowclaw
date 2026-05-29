@@ -7,7 +7,7 @@ const Home = () => {
     return (
         <main className="home-container">
             <Smile />
-            {/* <Display /> */}
+            <Display />
         </main>
     );
 };

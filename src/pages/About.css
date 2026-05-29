@@ -14,6 +14,7 @@
   align-items: center;
   gap: calc(3rem + 10vw);
   margin-bottom: calc(2rem + 2vw);
+  min-width: 0;
 }
 
 .profile-img-container {
@@ -29,12 +30,13 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.04);
 }
 
 .name-group {
   display: flex;
-  align-items: baseline;
-  gap: 1rem;
+  flex-direction: column;
+  gap: 0.5rem;
   margin-bottom: 1rem;
 }
 
@@ -45,8 +47,8 @@
 }
 
 .name-zh { 
-  font-size: calc(1rem + 0.4vw); 
-  font-weight: 500; 
+  font-size: calc(0.6rem + 0.4vw); 
+  font-weight: 800; 
   color: #666; 
 }
 
@@ -56,6 +58,7 @@
   flex-direction: column; /* 讓「按鈕列」與「敘述文字」上下分開 */
   align-items: flex-start;
   gap: 2.5rem; /* 按鈕跟文字的間距 */
+  min-width: 0;
 }
 
 .social-links {
@@ -91,6 +94,9 @@
   color: #666;
   max-width: 30rem;
   margin: 0;
+  min-width: 0;
+  overflow-wrap: anywhere;
+  word-break: break-word;
 }
 
 /* --- 手機響應式 --- */
@@ -100,14 +106,18 @@
   border-radius: 1rem 1rem 0rem 1rem;
   max-width: 12rem;
   }
-  /* 1. 隱藏中文名稱 */
-  .name-zh {
-    display: none;
+  /* 1. 手機版字體縮放 */
+  .name-en {
+    font-size: 1rem;
   }
 
-  /* 2. 手機版字體縮放 */
-  .name-en {
-    display: none;
+  .name-zh {
+    font-size: 0.9rem;
+  }
+
+  .title-en {
+    font-size: 0.8rem;
+    color: #999;
   }
 
   /* 3. 置中對齊 */
@@ -118,7 +128,8 @@
   } */
 
   .name-group {
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
     margin-bottom: 1.1rem;
   }
 
@@ -154,12 +165,12 @@
 }
 
 .row-title {
-  flex: 0 0 12.5rem;
+  flex: 0 0 3.5rem;
   font-size: calc(0.8rem + 0.3vw); 
   font-weight: 800;
   text-transform: uppercase;
   letter-spacing: 0.15rem;
-  margin-top: 1rem; 
+  margin: 1rem 0 0.5rem;
   line-height: 1.4; 
   display: flex;
   align-items: baseline; 
@@ -219,6 +230,60 @@
   color: #666;
   max-width: 35rem;
   line-height: 1.6;
+}
+
+.section-divider {
+  width: 100%;
+  border-top: 0.0625rem solid #eee;
+  margin: 3rem 0;
+}
+
+.partner-section {
+  display: flex;
+  flex-direction: column;
+  gap: 0rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+.partner-row {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.partner-card {
+  width: 100%;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 1rem;
+  border-radius: 1rem;
+  background: #ffffff;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.04);
+}
+
+.partner-card img {
+  width: 6rem;
+  height: 6rem;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+}
+
+.partner-name {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #414141;
+  margin-bottom: 0.35rem;
+}
+
+.partner-title {
+  font-size: 0.88rem;
+  color: #777;
+  line-height: 1.5;
 }
 
 .desc-link {
@@ -334,5 +399,16 @@
     max-width: 100%;
     margin: 0.25rem 0;
     padding: 0 0.5rem;
+  }
+
+  .partner-row {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .partner-card {
+    width: 100%;
+    max-width: 28rem;
   }
 }
